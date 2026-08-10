@@ -1,91 +1,491 @@
-ض ع, [8/10/2026 5:29 AM]
+ض ع, [8/10/2026 6:36 AM]
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مُوَقَّت | طريقك إلى العلم</title>
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#180914,#4b123c,#a91d70,#f06aa9);color:#fff;min-height:100vh;line-height:1.8}
-button{font-family:inherit}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:25px}
-.hero:before,.hero:after{content:"";position:absolute;top:0;width:32%;height:100%;z-index:4;background:linear-gradient(90deg,#260617,#6c174c 45%,#d43c91 100%);box-shadow:0 0 45px #ff4eae}
-.hero:before{left:-2%;clip-path:polygon(0 0,100% 0,78% 18%,88% 38%,72% 58%,84% 78%,65% 100%,0 100%)}
-.hero:after{right:-2%;transform:scaleX(-1);clip-path:polygon(0 0,100% 0,78% 18%,88% 38%,72% 58%,84% 78%,65% 100%,0 100%)}
-.hero-card{position:relative;z-index:5;width:min(900px,100%);text-align:center;padding:55px 25px;border-radius:35px;background:rgba(45,7,34,.72);border:1px solid rgba(255,170,220,.5);box-shadow:0 0 70px rgba(255,43,157,.35),inset 0 0 35px rgba(255,255,255,.05);backdrop-filter:blur(8px)}
-.candle{font-size:65px;display:inline-block;animation:candleMove 2.5s infinite ease-in-out;filter:drop-shadow(0 0 18px #ffb5dc)}
-@keyframes candleMove{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
-.ink{font-size:44px}
-.brand{font-size:clamp(48px,10vw,88px);color:#ffd1ec;text-shadow:0 0 20px #ff3da4,0 4px 15px #000;margin:5px 0}
-.subtitle{font-size:clamp(21px,4vw,31px);color:#fff0f9}
-.quote{margin:22px auto;font-size:22px;color:#ffd1e9;font-style:italic}
-.intro{max-width:700px;margin:auto;color:#ffe7f4;font-size:17px}
-.start-button,.test-button{border:0;color:#fff;cursor:pointer;border-radius:50px;background:linear-gradient(135deg,#b41472,#ff4da9);box-shadow:0 8px 30px rgba(255,38,158,.4);transition:.3s}
-.start-button{margin-top:30px;padding:15px 40px;font-size:19px}
-.start-button:hover,.test-button:hover{transform:translateY(-4px);box-shadow:0 12px 35px rgba(255,38,158,.65)}
-.sparkle{position:absolute;color:#ffd5ee;font-size:20px;animation:spark 3s infinite ease-in-out;z-index:3}
-@keyframes spark{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.3)}}
-.site-content{display:none;min-height:100vh;padding:55px 16px;background:radial-gradient(circle at top,#8f1760,#350c2c 55%,#170713)}
-.container{width:min(1100px,100%);margin:auto}
-.welcome{text-align:center;margin-bottom:40px}
-.welcome h2,.section-title{color:#ffd0ea;text-shadow:0 0 15px #ff3d9f}
-.welcome h2{font-size:clamp(30px,6vw,45px)}
-.welcome p{color:#ffe4f2;font-size:18px}
-.assessment,.journey,.card{background:rgba(255,255,255,.09);border:1px solid rgba(255,160,215,.25);box-shadow:0 15px 45px rgba(0,0,0,.25);backdrop-filter:blur(10px)}
-.assessment{border-radius:30px;padding:30px;margin-bottom:45px}
-.assessment h3{color:#ffd0e9;margin-bottom:25px;font-size:26px}
-.question{margin-bottom:28px}
-.question p{font-weight:bold;color:#fff0f8;margin-bottom:12px}
-.options{display:grid;gap:10px}
-.option{border:1px solid rgba(255,180,225,.3);background:rgba(255,255,255,.07);padding:13px 15px;border-radius:15px;cursor:pointer;transition:.25s}
-.option:hover{background:rgba(255,70,170,.22);transform:translateX(-3px)}
-.selected{background:rgba(255,66,168,.35);border-color:#ff72bc;box-shadow:0 0 15px rgba(255,66,168,.25)}
-.test-button{padding:13px 30px;font-size:17px;margin-top:5px}
-.result{display:none;margin-top:25px;padding:22px;border-radius:20px;background:rgba(255,190,225,.12);border:1px solid rgba(255,150,210,.3);color:#ffe9f5}
-.result h4{font-size:22px;color:#ffd0e9;margin-bottom:8px}
 
-ض ع, [8/10/2026 5:29 AM]
-.plan{display:none;margin-top:18px}
-.plan ul{padding-right:22px}
-.section-title{text-align:center;font-size:30px;margin-bottom:25px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:55px}
-.card{padding:28px 20px;border-radius:25px;text-align:center;transition:.3s}
-.card:hover{transform:translateY(-7px);box-shadow:0 20px 45px rgba(255,35,155,.25)}
-.card-icon{font-size:42px;margin-bottom:10px}
-.card h3{color:#ffd0e9;margin-bottom:8px}
-.card p{color:#ffe8f4;font-size:15px}
-.card button{margin-top:18px;border:0;padding:10px 20px;border-radius:25px;background:#ff4ca8;color:#fff;cursor:pointer}
-.journey{border-radius:30px;padding:30px;margin-bottom:45px;text-align:center}
-.journey-bar{height:16px;background:rgba(255,255,255,.15);border-radius:20px;overflow:hidden;margin:20px 0}
-.journey-progress{width:18%;height:100%;background:linear-gradient(90deg,#ff4da8,#ffd0eb);border-radius:20px;transition:width .8s}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
-.step{padding:14px;border-radius:16px;background:rgba(255,255,255,.08);color:#ffe4f2}
-footer{text-align:center;padding:35px 15px;color:#ffcce5}
-@media(max-width:600px){.hero:before,.hero:after{width:24%}.hero-card{padding:40px 18px}.assessment,.journey{padding:22px 16px}.start-button{width:100%}.quote{font-size:18px}}
+html{scroll-behavior:smooth}
+
+body{
+font-family:Tahoma,Arial,sans-serif;
+background:#160914;
+color:#fff;
+min-height:100vh;
+line-height:1.8;
+overflow-x:hidden
+}
+
+button{font-family:inherit}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+padding:25px 20px;
+background:
+radial-gradient(circle at 50% 40%,rgba(255,74,177,.25),transparent 35%),
+linear-gradient(135deg,#160713,#4a1039,#9b1768,#ef62ad)
+}
+
+.curtain{
+position:absolute;
+top:0;
+height:100%;
+width:31%;
+z-index:4;
+background:
+linear-gradient(90deg,#17030f,#551038 45%,#c52d83 78%,#65113f);
+box-shadow:0 0 45px rgba(255,57,166,.55);
+transition:transform 1.8s cubic-bezier(.7,0,.2,1)
+}
+
+.curtain.left{
+left:0;
+clip-path:polygon(0 0,100% 0,83% 15%,92% 32%,77% 48%,91% 67%,73% 84%,84% 100%,0 100%)
+}
+
+.curtain.right{
+right:0;
+transform:scaleX(-1);
+clip-path:polygon(0 0,100% 0,83% 15%,92% 32%,77% 48%,91% 67%,73% 84%,84% 100%,0 100%)
+}
+
+.hero.open .curtain.left{transform:translateX(-105%)}
+.hero.open .curtain.right{transform:translateX(105%) scaleX(-1)}
+
+.curtain:after{
+content:"";
+position:absolute;
+top:0;
+right:8%;
+width:7px;
+height:100%;
+background:rgba(255,191,229,.18);
+box-shadow:15px 0 20px rgba(0,0,0,.25)
+}
+
+.hero-card{
+position:relative;
+z-index:5;
+width:min(900px,100%);
+text-align:center;
+padding:55px 28px;
+border-radius:36px;
+background:rgba(31,5,25,.76);
+border:1px solid rgba(255,180,225,.4);
+box-shadow:
+0 0 80px rgba(255,39,158,.35),
+inset 0 0 35px rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+transition:opacity .8s,transform .8s
+}
+
+.hero.open .hero-card{
+transform:scale(.96);
+opacity:.95
+}
+
+.candle{
+font-size:68px;
+display:inline-block;
+filter:drop-shadow(0 0 18px #ffc0e2);
+animation:candleMove 2.5s infinite ease-in-out
+}
+
+@keyframes candleMove{
+0%,100%{transform:translateY(0) rotate(-3deg)}
+50%{transform:translateY(-12px) rotate(3deg)}
+}
+
+.ink{
+font-size:45px;
+margin:4px
+}
+
+.brand{
+font-size:clamp(48px,10vw,88px);
+color:#ffd4ec;
+margin:5px 0;
+text-shadow:
+0 0 20px #ff3da4,
+0 4px 15px #000
+}
+
+.subtitle{
+font-size:clamp(21px,4vw,31px);
+color:#fff1f9
+}
+
+.quote{
+margin:22px auto;
+font-size:22px;
+color:#ffd1e9;
+font-style:italic
+}
+
+.intro{
+max-width:700px;
+margin:auto;
+color:#ffe7f4;
+font-size:17px
+}
+
+.start-button{
+border:0;
+margin-top:30px;
+padding:15px 40px;
+border-radius:50px;
+background:linear-gradient(135deg,#b41472,#ff4da9);
+color:white;
+font-size:19px;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(255,38,158,.4);
+transition:.3s;
+position:relative;
+z-index:10
+}
+
+.start-button:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 38px rgba(255,38,158,.65)
+}
+
+.stars{
+position:absolute;
+inset:0;
+pointer-events:none;
+z-index:2
+}
+
+.star{
+position:absolute;
+color:#ffd8ef;
+font-size:20px;
+animation:twinkle 2.5s infinite ease-in-out
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.15;transform:scale(.7)}
+50%{opacity:1;transform:scale(1.3)}
+}
+
+.site-content{
+display:none;
+min-height:100vh;
+padding:55px 16px;
+background:
+radial-gradient(circle at 10% 10%,rgba(255,88,181,.22),transparent 25%),
+radial-gradient(circle at 90% 30%,rgba(255,160,215,.12),transparent 25%),
+linear-gradient(180deg,#771452,#350c2c 55%,#180713)
+}
+
+.container{
+width:min(1100px,100%);
+margin:auto
+}
+
+.welcome{
+text-align:center;
+margin-bottom:40px
+}
+
+.welcome h2,
+.section-title{
+color:#ffd0ea;
+text-shadow:0 0 15px #ff3d9f
+}
+
+.welcome h2{
+font-size:clamp(30px,6vw,45px)
+}
+
+.welcome p{
+color:#ffe4f2;
+font-size:18px
+}
+
+.assessment,
+.journey,
+.card{
+background:rgba(255,255,255,.09);
+border:1px solid rgba(255,160,215,.25);
+box-shadow:0 15px 45px rgba(0,0,0,.25);
+backdrop-filter:blur(10px)
+}
+
+.assessment{
+border-radius:30px;
+padding:30px;
+margin-bottom:45px
+}
+
+.assessment h3{
+color:#ffd0e9;
+margin-bottom:25px;
+font-size:26px
+}
+
+.question{
+margin-bottom:28px
+}
+
+ض ع, [8/10/2026 6:36 AM]
+.question p{
+font-weight:bold;
+color:#fff0f8;
+margin-bottom:12px
+}
+
+.options{
+display:grid;
+gap:10px
+}
+
+.option{
+border:1px solid rgba(255,180,225,.3);
+background:rgba(255,255,255,.07);
+padding:13px 15px;
+border-radius:15px;
+cursor:pointer;
+transition:.25s
+}
+
+.option:hover{
+background:rgba(255,70,170,.22);
+transform:translateX(-3px)
+}
+
+.option.selected{
+background:rgba(255,66,168,.38);
+border-color:#ff72bc;
+box-shadow:0 0 15px rgba(255,66,168,.25)
+}
+
+.test-button{
+border:0;
+padding:13px 30px;
+font-size:17px;
+border-radius:30px;
+background:linear-gradient(135deg,#b41472,#ff4da9);
+color:#fff;
+cursor:pointer;
+box-shadow:0 8px 25px rgba(255,38,158,.3)
+}
+
+.result{
+display:none;
+margin-top:25px;
+padding:22px;
+border-radius:20px;
+background:rgba(255,190,225,.12);
+border:1px solid rgba(255,150,210,.3);
+color:#ffe9f5
+}
+
+.result h4{
+font-size:22px;
+color:#ffd0e9;
+margin-bottom:8px
+}
+
+.plan{
+display:none;
+margin-top:18px
+}
+
+.plan ul{
+padding-right:22px
+}
+
+.section-title{
+text-align:center;
+font-size:30px;
+margin-bottom:25px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:55px
+}
+
+.card{
+padding:28px 20px;
+border-radius:25px;
+text-align:center;
+transition:.3s
+}
+
+.card:hover{
+transform:translateY(-7px);
+box-shadow:0 20px 45px rgba(255,35,155,.25)
+}
+
+.card-icon{
+font-size:42px;
+margin-bottom:10px
+}
+
+.card h3{
+color:#ffd0e9;
+margin-bottom:8px
+}
+
+.card p{
+color:#ffe8f4;
+font-size:15px
+}
+
+.card button{
+margin-top:18px;
+border:0;
+padding:10px 20px;
+border-radius:25px;
+background:#ff4ca8;
+color:#fff;
+cursor:pointer;
+transition:.25s
+}
+
+.card button:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(255,76,168,.55)
+}
+
+.journey{
+border-radius:30px;
+padding:30px;
+margin-bottom:45px;
+text-align:center
+}
+
+.journey-bar{
+height:16px;
+background:rgba(255,255,255,.15);
+border-radius:20px;
+overflow:hidden;
+margin:20px 0
+}
+
+.journey-progress{
+width:18%;
+height:100%;
+background:linear-gradient(90deg,#ff4da8,#ffd0eb);
+border-radius:20px;
+transition:width .8s
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:12px
+}
+
+.step{
+padding:14px;
+border-radius:16px;
+background:rgba(255,255,255,.08);
+color:#ffe4f2
+}
+
+footer{
+text-align:center;
+padding:35px 15px;
+color:#ffcce5
+}
+
+.celebration{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:100;
+display:none
+}
+
+.celebration.show{
+display:block
+}
+
+.confetti{
+position:absolute;
+font-size:24px;
+animation:fall 2.8s linear forwards
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0);
+opacity:1
+}
+100%{
+transform:translateY(110vh) rotate(720deg);
+opacity:0
+}
+}
+
+@media(max-width:600px){
+.curtain{width:25%}
+.hero-card{padding:40px 18px}
+.assessment,.journey{padding:22px 16px}
+.start-button{width:100%}
+.quote{font-size:18px}
+}
 </style>
 </head>
+
 <body>
 
 <section class="hero" id="home">
-<div class="sparkle" style="top:15%;left:38%">✦</div>
-<div class="sparkle" style="top:28%;right:35%;animation-delay:1s">✧</div>
-<div class="sparkle" style="bottom:20%;left:32%;animation-delay:2s">✦</div>
-<div class="sparkle" style="bottom:28%;right:30%;animation-delay:.5s">✧</div>
+
+<div class="curtain left"></div>
+<div class="curtain right"></div>
+
+<div class="stars">
+<span class="star" style="top:12%;left:38%">✦</span>
+<span class="star" style="top:25%;right:36%;animation-delay:.7s">✧</span>
+<span class="star" style="bottom:22%;left:32%;animation-delay:1.3s">✦</span>
+<span class="star" style="bottom:30%;right:31%;animation-delay:1.8s">✧</span>
+<span class="star" style="top:42%;left:20%;animation-delay:2s">✦</span>
+<span class="star" style="top:55%;right:20%;animation-delay:.4s">✧</span>
+</div>
 
 <div class="hero-card">
+
 <div class="candle">🕯️</div>
+
 <div class="ink">✒️</div>
+
 <h1 class="brand">مُوَقَّت</h1>
+
 <h2 class="subtitle">طريقك إلى العلم</h2>
+
 <div class="quote">«مع المحبرة إلى المقبرة»</div>
-<p class="intro">في عالمٍ تكثر فيه الطرق وتتشابك فيه الخيوط، اخترنا أن يكون لمُوَقَّت طريقٌ هادئ: علمٌ نافع، وقرآن، ولغة، وتدرّج، ورفقة في طريق التعلم.</p>
-<button class="start-button" onclick="enterSite()">افتح الستارة وابدأ رحلتك</button>
+
+<p class="intro">
+في عالمٍ تكثر فيه الطرق وتتشابك فيه الخيوط،
+اخترنا أن يكون لمُوَقَّت طريقٌ هادئ:
+علمٌ نافع، وقرآن، ولغة، وتدرّج، ورفقة في طريق التعلم.
+</p>
+
+<button class="start-button" id="startButton">
+افتح الستارة وابدأ رحلتك
+</button>
+
 </div>
 </section>
 
+
 <main class="site-content" id="siteContent">
+
 <div class="container">
 
 <section class="welcome">
@@ -93,183 +493,466 @@ footer{text-align:center;padding:35px 15px;color:#ffcce5}
 <p>قبل أن نقترح عليك طريقك، نريد أن نتعرف عليك قليلًا.</p>
 </section>
 
+
 <section class="assessment">
+
+ض ع, [8/10/2026 6:36 AM]
 <h3>بوابة التعرف عليك</h3>
 
+
 <div class="question">
+
 <p>1. كيف تصف مستواك في اللغة العربية؟</p>
+
 <div class="options">
-<div class="option" onclick="choose(this,1)">مبتدئ — ما زلت أتعلم الأساسيات</div>
-<div class="option" onclick="choose(this,1)">متوسط — أفهم معظم الكلام وأحتاج إلى تطوير</div>
-<div class="option" onclick="choose(this,1)">متقدم — أقرأ وأفهم النصوص جيدًا</div>
-<div class="option" onclick="choose(this,1)">متمكن — أريد التعمق في علوم العربية</div>
+
+<div class="option" data-question="1">
+مبتدئ — ما زلت أتعلم الأساسيات
+</div>
+
+<div class="option" data-question="1">
+متوسط — أفهم معظم الكلام وأحتاج إلى تطوير
+</div>
+
+<div class="option" data-question="1">
+متقدم — أقرأ وأفهم النصوص جيدًا
+</div>
+
+<div class="option" data-question="1">
+متمكن — أريد التعمق في علوم العربية
+</div>
+
 </div>
 </div>
 
+
 <div class="question">
+
 <p>2. ما المجال الذي ترغب في البدء به؟</p>
+
 <div class="options">
-<div class="option" onclick="choose(this,2)">📖 القرآن الكريم</div>
-<div class="option" onclick="choose(this,2)">🗣️ اللغة العربية</div>
-<div class="option" onclick="choose(this,2)">📚 العلوم الشرعية</div>
-<div class="option" onclick="choose(this,2)">🌱 أريد أن أبدأ من الأساس</div>
+
+<div class="option" data-question="2">
+📖 القرآن الكريم
+</div>
+
+<div class="option" data-question="2">
+🗣️ اللغة العربية
+</div>
+
+<div class="option" data-question="2">
+📚 العلوم الشرعية
+</div>
+
+<div class="option" data-question="2">
+🌱 أريد أن أبدأ من الأساس
+</div>
+
 </div>
 </div>
 
+
 <div class="question">
+
 <p>3. كم تستطيع أن تخصص للتعلم يوميًا؟</p>
+
 <div class="options">
-<div class="option" onclick="choose(this,3)">15 دقيقة</div>
-<div class="option" onclick="choose(this,3)">نصف ساعة</div>
-<div class="option" onclick="choose(this,3)">ساعة</div>
-<div class="option" onclick="choose(this,3)">أكثر من ساعة</div>
+
+<div class="option" data-question="3">15 دقيقة</div>
+
+<div class="option" data-question="3">نصف ساعة</div>
+
+<div class="option" data-question="3">ساعة</div>
+
+<div class="option" data-question="3">أكثر من ساعة</div>
+
 </div>
 </div>
+
 
 <div class="question">
+
 <p>4. ما هدفك من التعلم؟</p>
+
 <div class="options">
-<div class="option" onclick="choose(this,4)">بناء أساس قوي</div>
-<div class="option" onclick="choose(this,4)">حفظ القرآن ومراجعته</div>
-<div class="option" onclick="choose(this,4)">فهم العلوم الشرعية</div>
-<div class="option" onclick="choose(this,4)">تحسين العربية وفهم التراث</div>
+
+<div class="option" data-question="4">
+بناء أساس قوي
+</div>
+
+<div class="option" data-question="4">
+حفظ القرآن ومراجعته
+</div>
+
+<div class="option" data-question="4">
+فهم العلوم الشرعية
+</div>
+
+<div class="option" data-question="4">
+تحسين العربية وفهم التراث
+</div>
+
 </div>
 </div>
 
-<button class="test-button" onclick="showResult()">أظهر لي طريقي</button>
 
-ض ع, [8/10/2026 5:29 AM]
+<button class="test-button" id="resultButton">
+أظهر لي طريقي
+</button>
+
+
 <div class="result" id="result">
+
 <h4 id="resultTitle">طريقك يبدأ من هنا 🌿</h4>
+
 <p id="resultText"></p>
+
 <div class="plan" id="plan">
+
 <strong>اقتراح البداية:</strong>
+
 <ul id="planList"></ul>
+
 </div>
+
 </div>
+
 </section>
+
 
 <h2 class="section-title">أبواب العلم</h2>
 
+
 <section class="cards">
+
+
 <div class="card">
+
 <div class="card-icon">📖</div>
+
 <h3>القرآن الكريم</h3>
-<p>مسارات للحفظ والمراجعة والتدبر، مع خطط تناسب وقتك ومستواك.</p>
-<button onclick="comingSoon('القرآن الكريم')">ابدأ الطريق</button>
+
+<p>
+مسارات للحفظ والمراجعة والتدبر،
+مع خطط تناسب وقتك ومستواك.
+</p>
+
+<button class="door-button" data-door="القرآن الكريم">
+ابدأ الطريق
+</button>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🗣️</div>
-<h3>العربية</h3>
-<p>تعلم العربية بطريقة متدرجة وواضحة للناطقين بها ولغير الناطقين بها.</p>
-<button onclick="comingSoon('تعلم العربية')">ابدأ الطريق</button>
+
+<h3>اللغة العربية</h3>
+
+<p>
+تعلم العربية بطريقة متدرجة وواضحة
+للناطقين بها ولغير الناطقين بها.
+</p>
+
+<button class="door-button" data-door="اللغة العربية">
+ابدأ الطريق
+</button>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">📚</div>
+
 <h3>العلوم الشرعية</h3>
-<p>مسارات علمية متدرجة بحسب مستوى الطالب واهتمامه ووقته.</p>
-<button onclick="comingSoon('العلوم الشرعية')">ابدأ الطريق</button>
+
+<p>
+مسارات علمية متدرجة بحسب مستوى
+الطالب واهتمامه ووقته.
+</p>
+
+<button class="door-button" data-door="العلوم الشرعية">
+ابدأ الطريق
+</button>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🧭</div>
+
 <h3>رحلتي في مُوَقَّت</h3>
-<p>خطة شخصية تساعدك على معرفة ماذا تتعلم الآن وماذا بعد ذلك.</p>
-<button onclick="scrollToJourney()">شاهد رحلتي</button>
+
+<p>
+خطة شخصية تساعدك على معرفة ماذا
+تتعلم الآن وماذا بعد ذلك.
+</p>
+
+<button id="journeyButton">
+شاهد رحلتي
+</button>
+
 </div>
+
+
 </section>
+
 
 <section class="journey" id="journey">
+
 <h2 class="section-title">رحلتك في مُوَقَّت</h2>
+
 <p>خطوة صغيرة كل يوم، خير من طريق طويل بلا بداية.</p>
+
 <div class="journey-bar">
+
 <div class="journey-progress" id="progress"></div>
+
 </div>
+
 <div class="steps">
+
 <div class="step">✓ التعرف على مستواك</div>
+
 <div class="step">2. اختيار مسارك</div>
+
 <div class="step">3. بناء خطتك</div>
+
 <div class="step">4. التعلم والمتابعة</div>
+
 <div class="step">5. المراجعة والتقدم</div>
+
 </div>
+
 </section>
 
-<footer>مُوَقَّت — طريق هادئ إلى العلم النافع 🌹</footer>
+
+<footer>
+مُوَقَّت — طريق هادئ إلى العلم النافع 🌹
+</footer>
+
 </div>
 </main>
 
+
+<div class="celebration" id="celebration"></div>
+
+
 <script>
+
+document.addEventListener("DOMContentLoaded",function(){
+
 const answers={};
 
-function enterSite(){
-document.getElementById("home").style.display="none";
-document.getElementById("siteContent").style.display="block";
-window.scrollTo({top:0,behavior:"smooth"});
-}
-
-function choose(element,questionNumber){
-const parent=element.parentElement;
-parent.querySelectorAll(".option").forEach(function(option){
-option.classList.remove("selected");
-});
-element.classList.add("selected");
-answers[questionNumber]=element.innerText.trim();
-}
-
-function showResult(){
+const hero=document.getElementById("home");
+const startButton=document.getElementById("startButton");
+const siteContent=document.getElementById("siteContent");
+const resultButton=document.getElementById("resultButton");
 const result=document.getElementById("result");
+const resultTitle=document.getElementById("resultTitle");
+
+ض ع, [8/10/2026 6:36 AM]
+const resultText=document.getElementById("resultText");
+const plan=document.getElementById("plan");
+const planList=document.getElementById("planList");
+const progress=document.getElementById("progress");
+const journey=document.getElementById("journey");
+const journeyButton=document.getElementById("journeyButton");
+const celebration=document.getElementById("celebration");
+
+
+startButton.addEventListener("click",function(){
+
+hero.classList.add("open");
+
+setTimeout(function(){
+
+hero.style.display="none";
+
+siteContent.style.display="block";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+},1200);
+
+});
+
+
+document.querySelectorAll(".option").forEach(function(option){
+
+option.addEventListener("click",function(){
+
+const number=this.getAttribute("data-question");
+
+document.querySelectorAll(
+'.option[data-question="'+number+'"]'
+).forEach(function(item){
+
+item.classList.remove("selected");
+
+});
+
+this.classList.add("selected");
+
+answers[number]=this.textContent.trim();
+
+});
+
+});
+
+
+resultButton.addEventListener("click",function(){
 
 if(!answers[1]!answers[2]!answers[3]||!answers[4]){
+
 result.style.display="block";
-document.getElementById("resultTitle").textContent="أكمل البوابة أولًا 🌿";
-document.getElementById("resultText").textContent="اختر إجابة واحدة في كل سؤال حتى نستطيع أن نقترح لك بداية مناسبة.";
-document.getElementById("plan").style.display="none";
-result.scrollIntoView({behavior:"smooth",block:"center"});
+
+resultTitle.textContent="أكمل البوابة أولًا 🌿";
+
+resultText.textContent=
+"اختر إجابة واحدة في كل سؤال حتى نستطيع أن نقترح لك بداية مناسبة.";
+
+plan.style.display="none";
+
+result.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
 return;
+
 }
 
-let level="مبتدئ";
-if(answers[1].includes("متوسط"))level="متوسط";
-if(answers[1].includes("متقدم"))level="متقدم";
-if(answers[1].includes("متمكن"))level="متمكن";
 
-document.getElementById("resultTitle").textContent="أحسنت! بدأتَ ترسم طريقك 🌿";
-document.getElementById("resultText").textContent=
+let level="مبتدئ";
+
+if(answers[1].includes("متوسط")) level="متوسط";
+if(answers[1].includes("متقدم")) level="متقدم";
+if(answers[1].includes("متمكن")) level="متمكن";
+
+
+resultTitle.textContent="أحسنت! بدأتَ ترسم طريقك 🌿";
+
+resultText.textContent=
 "مستواك في العربية: "+level+
 ". المجال الذي اخترته: "+answers[2]+
 ". الوقت المتاح لك: "+answers[3]+
 ". وهدفك: "+answers[4]+".";
 
-const list=document.getElementById("planList");
-list.innerHTML="";
 
-[
+planList.innerHTML="";
+
+
+const items=[
 "ابدأ بدرس قصير يناسب مستواك الحالي.",
 "خصص وقتًا ثابتًا يوميًا ولو كان قليلًا.",
 "اجعل القرآن الكريم حاضرًا في برنامجك بحسب قدرتك.",
 "راجع ما تعلمته قبل الانتقال إلى الجديد.",
 "زد مقدار التعلم تدريجيًا عندما يسمح وقتك."
-].forEach(function(item){
+];
+
+
+items.forEach(function(item){
+
 const li=document.createElement("li");
+
 li.textContent=item;
-list.appendChild(li);
+
+planList.appendChild(li);
+
 });
 
-document.getElementById("plan").style.display="block";
-document.getElementById("progress").style.width="35%";
+
+plan.style.display="block";
+
 result.style.display="block";
-result.scrollIntoView({behavior:"smooth",block:"center"});
+
+progress.style.width="35%";
+
+celebrate();
+
+
+result.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+});
+
+
+journeyButton.addEventListener("click",function(){
+
+journey.scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+
+document.querySelectorAll(".door-button").forEach(function(button){
+
+button.addEventListener("click",function(){
+
+const name=this.getAttribute("data-door");
+
+alert(
+"باب "+name+
+" سيكون من المسارات الأساسية في مُوَقَّت، وسنطوره خطوة خطوة بإذن الله."
+);
+
+});
+
+});
+
+
+function celebrate(){
+
+celebration.innerHTML="";
+
+const symbols=[
+"✦","✧","★","☆","✦","🌟","✨","✧","★","✦",
+"💗","✧","🌸","★","✨","✦","☆","💖","✧","🌟"
+];
+
+for(let i=0;i<45;i++){
+
+const item=document.createElement("span");
+
+item.className="confetti";
+
+item.textContent=
+symbols[Math.floor(Math.random()*symbols.length)];
+
+item.style.left=Math.random()*100+"%";
+
+item.style.top=(-10-Math.random()*30)+"%";
+
+item.style.animationDelay=(Math.random()*1.5)+"s";
+
+item.style.fontSize=(16+Math.random()*18)+"px";
+
+celebration.appendChild(item);
+
 }
 
-function scrollToJourney(){
-document.getElementById("journey").scrollIntoView({behavior:"smooth"});
+celebration.classList.add("show");
+
+setTimeout(function(){
+
+celebration.classList.remove("show");
+
+},3500);
+
 }
 
-function comingSoon(section){
-alert("باب "+section+" سيكون من المسارات الأساسية في مُوَقَّت، وسنطوره خطوة خطوة بإذن الله.");
-}
+});
+
 </script>
 
 </body>
