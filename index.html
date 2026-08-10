@@ -1007,3 +1007,1022 @@ behavior:"smooth"
 
 </body>
 </html>
+
+ض ع, [8/10/2026 8:28 AM]
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مُوَقَّت | طريقك إلى العلم النافع</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:Tahoma,Arial,sans-serif;
+background:#180713;
+color:#fff;
+line-height:1.9
+}
+button{font-family:inherit}
+a{text-decoration:none;color:inherit}
+
+.hero{
+min-height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+padding:25px;
+background:radial-gradient(circle at 50% 45%,#c92a83 0,#69103f 40%,#180713 100%)
+}
+
+.curtain{
+position:absolute;
+top:0;
+width:34%;
+height:100%;
+z-index:10;
+background:linear-gradient(90deg,#11020a,#570b35 25%,#d52d86 55%,#620c3b 80%,#18030d);
+box-shadow:0 0 70px rgba(255,60,175,.65);
+transition:transform 1.8s ease
+}
+
+.curtain.left{
+left:0;
+clip-path:polygon(0 0,100% 0,86% 12%,96% 25%,82% 38%,95% 52%,80% 66%,94% 80%,78% 91%,88% 100%,0 100%)
+}
+
+.curtain.right{
+right:0;
+transform:scaleX(-1);
+clip-path:polygon(0 0,100% 0,86% 12%,96% 25%,82% 38%,95% 52%,80% 66%,94% 80%,78% 91%,88% 100%,0 100%)
+}
+
+.hero.open .curtain.left{transform:translateX(-115%)}
+.hero.open .curtain.right{transform:translateX(115%) scaleX(-1)}
+
+.stars{
+position:absolute;
+inset:0;
+pointer-events:none
+}
+
+.star{
+position:absolute;
+color:#ffd7ec;
+font-size:25px;
+animation:twinkle 2s infinite alternate
+}
+
+@keyframes twinkle{
+from{opacity:.2;transform:scale(.7)}
+to{opacity:1;transform:scale(1.25)}
+}
+
+.hero-card{
+position:relative;
+z-index:5;
+width:min(900px,100%);
+padding:55px 30px;
+text-align:center;
+border-radius:38px;
+background:rgba(25,4,19,.84);
+border:1px solid rgba(255,190,225,.45);
+box-shadow:0 0 90px rgba(255,50,170,.42);
+backdrop-filter:blur(12px)
+}
+
+.candle{
+font-size:70px;
+display:inline-block;
+filter:drop-shadow(0 0 20px #ffd1eb);
+animation:candle 2s infinite ease-in-out
+}
+
+@keyframes candle{
+0%,100%{transform:translateY(0) rotate(-3deg)}
+50%{transform:translateY(-9px) rotate(3deg)}
+}
+
+.ink{font-size:42px}
+
+.brand{
+font-size:clamp(50px,10vw,90px);
+color:#ffd8ed;
+text-shadow:0 0 28px #ff3c9f;
+margin:5px 0
+}
+
+.subtitle{
+font-size:clamp(21px,4vw,31px);
+color:#fff0f8
+}
+
+.quote{
+margin:20px 0;
+font-size:20px;
+color:#ffd1e8;
+font-style:italic
+}
+
+.intro{
+max-width:720px;
+margin:auto;
+color:#ffeaf5;
+font-size:17px
+}
+
+.start-btn,.main-btn,.card-btn,.close-btn{
+border:0;
+border-radius:50px;
+padding:13px 28px;
+background:linear-gradient(135deg,#97105f,#f0449d);
+color:#fff;
+cursor:pointer;
+font-size:17px;
+box-shadow:0 8px 25px rgba(255,55,165,.25);
+transition:.25s
+}
+
+.start-btn{
+margin-top:30px;
+padding:15px 40px;
+font-size:19px
+}
+
+.start-btn:hover,.main-btn:hover,.card-btn:hover,.close-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 30px rgba(255,55,165,.4)
+}
+
+.site{
+display:none;
+min-height:100vh;
+padding:55px 16px;
+background:
+radial-gradient(circle at 10% 5%,rgba(210,30,135,.42),transparent 27%),
+radial-gradient(circle at 90% 25%,rgba(255,60,165,.18),transparent 25%),
+linear-gradient(180deg,#691344,#190713)
+}
+
+.container{
+width:min(1120px,100%);
+margin:auto
+}
+
+.welcome{
+text-align:center;
+margin-bottom:45px
+}
+
+.welcome h2,.section-title{
+color:#ffd0e8;
+text-shadow:0 0 15px rgba(255,50,160,.5)
+}
+
+.welcome h2{
+font-size:clamp(29px,6vw,46px)
+}
+
+.welcome p{
+color:#ffe6f2;
+font-size:18px
+}
+
+.notice{
+padding:22px;
+margin-bottom:42px;
+border-radius:25px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,170,215,.2);
+text-align:center;
+color:#ffe4f1
+}
+
+.notice strong{color:#ffd0e8}
+
+.box,.card,.journey,.library{
+background:rgba(255,255,255,.065);
+border:1px solid rgba(255,155,210,.22);
+box-shadow:0 15px 45px rgba(0,0,0,.25);
+backdrop-filter:blur(8px)
+}
+
+.box{
+padding:30px;
+border-radius:28px;
+margin-bottom:48px
+}
+
+.box h3{
+color:#ffd0e8;
+font-size:26px;
+margin-bottom:25px
+}
+
+.question{margin-bottom:28px}
+
+.question p{
+font-weight:bold;
+margin-bottom:12px;
+color:#fff2f8
+}
+
+.options{
+display:grid;
+gap:10px
+}
+
+ض ع, [8/10/2026 8:28 AM]
+.option{
+padding:13px 15px;
+border:1px solid rgba(255,175,220,.25);
+background:rgba(255,255,255,.06);
+border-radius:15px;
+cursor:pointer;
+transition:.25s
+}
+
+.option:hover{
+background:rgba(255,60,160,.2);
+transform:translateX(-3px)
+}
+
+.option.selected{
+background:rgba(255,60,160,.35);
+border-color:#ff80c4
+}
+
+.result{
+display:none;
+margin-top:25px;
+padding:22px;
+border-radius:20px;
+background:rgba(255,180,220,.1);
+border:1px solid rgba(255,155,210,.35)
+}
+
+.result h4{
+color:#ffd0e8;
+font-size:22px;
+margin-bottom:8px
+}
+
+.plan{
+display:none;
+margin-top:18px
+}
+
+.plan ul{padding-right:22px}
+
+.section-title{
+text-align:center;
+font-size:31px;
+margin-bottom:25px
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:48px
+}
+
+.card{
+padding:28px 20px;
+text-align:center;
+border-radius:25px;
+transition:.3s
+}
+
+.card:hover{
+transform:translateY(-7px);
+border-color:rgba(255,170,220,.45)
+}
+
+.card-icon{font-size:46px}
+
+.card h3{
+color:#ffd0e8;
+margin:8px 0;
+font-size:22px
+}
+
+.card p{
+color:#ffe7f3;
+font-size:15px
+}
+
+.card-btn{margin-top:18px}
+
+.knowledge{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+margin-bottom:50px
+}
+
+.knowledge-item{
+padding:23px;
+border-radius:22px;
+background:rgba(255,255,255,.055);
+border:1px solid rgba(255,155,210,.18)
+}
+
+.knowledge-item h3{
+color:#ffd0e8;
+margin-bottom:8px
+}
+
+.knowledge-item p{
+color:#ffe7f3;
+font-size:15px
+}
+
+.library{
+padding:30px;
+border-radius:28px;
+margin-bottom:48px;
+text-align:center
+}
+
+.library-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:14px;
+margin-top:22px
+}
+
+.book{
+padding:16px;
+border-radius:16px;
+background:rgba(255,255,255,.06);
+color:#ffe3f0
+}
+
+.journey{
+padding:30px;
+border-radius:28px;
+text-align:center;
+margin-bottom:45px
+}
+
+.bar{
+height:16px;
+background:rgba(255,255,255,.12);
+border-radius:20px;
+overflow:hidden;
+margin:20px 0
+}
+
+.progress{
+height:100%;
+width:18%;
+background:linear-gradient(90deg,#ff4ca8,#ffd1eb);
+border-radius:20px;
+transition:.7s
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px
+}
+
+.step{
+padding:13px;
+border-radius:14px;
+background:rgba(255,255,255,.07);
+color:#ffe2f0
+}
+
+footer{
+text-align:center;
+padding:35px;
+color:#ffc9e3
+}
+
+.modal{
+display:none;
+position:fixed;
+inset:0;
+z-index:100;
+background:rgba(0,0,0,.75);
+align-items:center;
+justify-content:center;
+padding:20px
+}
+
+.modal.show{display:flex}
+
+.modal-box{
+width:min(620px,100%);
+padding:30px;
+border-radius:28px;
+text-align:center;
+background:linear-gradient(145deg,#74134f,#260b1e);
+border:1px solid #ff8bc8;
+box-shadow:0 0 60px rgba(255,50,165,.45)
+}
+
+.modal-box h2{
+color:#ffd0e8;
+margin-bottom:12px
+}
+
+.modal-box p{color:#ffe8f4}
+
+.close-btn{margin-top:20px}
+
+@media(max-width:600px){
+.hero-card{padding:40px 18px}
+.box,.journey,.library{padding:20px}
+.start-btn{width:100%}
+.curtain{width:27%}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero" id="home">
+
+<div class="curtain left"></div>
+<div class="curtain right"></div>
+
+<div class="stars">
+<span class="star" style="top:12%;left:20%">✦</span>
+<span class="star" style="top:22%;right:20%">✧</span>
+<span class="star" style="top:52%;left:15%">★</span>
+<span class="star" style="top:65%;right:15%">✦</span>
+<span class="star" style="bottom:15%;left:38%">✧</span>
+<span class="star" style="bottom:25%;right:38%">★</span>
+</div>
+
+<div class="hero-card">
+
+<div class="candle">🕯</div>
+<div class="ink">✒️</div>
+
+<h1 class="brand">مُوَقَّت</h1>
+
+<h2 class="subtitle">طريقك إلى العلم النافع</h2>
+
+<div class="quote">«مع المحبرة إلى المقبرة»</div>
+
+<p class="intro">
+منصة هادئة للتعلم المنظم؛ نأخذ منها ما نحتاج إليه من العلم النافع، ثم نمضي به إلى حياتنا وعملنا.
+</p>
+
+<button class="start-btn" id="startBtn">
+افتح الستارة وابدأ رحلتك
+</button>
+
+</div>
+</section>
+
+
+<main class="site" id="site">
+
+<div class="container">
+
+<section class="welcome">
+
+<h2>مرحبًا بك في مُوَقَّت 🌹</h2>
+
+<p>لنبدأ من حيث أنت، ثم نبني طريقك خطوة خطوة.</p>
+
+</section>
+
+
+<div class="notice">
+
+ض ع, [8/10/2026 8:28 AM]
+<strong>مُوَقَّت</strong>
+ليست غايةً في ذاتها؛ هي وسيلة للوصول إلى العلم النافع، وحسن الانتفاع به.
+
+</div>
+
+
+<section class="box">
+
+<h3>🧭 بوابة التعرف عليك</h3>
+
+
+<div class="question">
+
+<p>1. كيف تصف مستواك في اللغة العربية؟</p>
+
+<div class="options">
+
+<div class="option" data-q="1">
+مبتدئ — ما زلت أتعلم الأساسيات
+</div>
+
+<div class="option" data-q="1">
+متوسط — أفهم معظم الكلام وأحتاج إلى تطوير
+</div>
+
+<div class="option" data-q="1">
+متقدم — أقرأ وأفهم النصوص جيدًا
+</div>
+
+<div class="option" data-q="1">
+متمكن — أريد التعمق في علوم العربية
+</div>
+
+</div>
+</div>
+
+
+<div class="question">
+
+<p>2. ما المجال الذي ترغب في البدء به؟</p>
+
+<div class="options">
+
+<div class="option" data-q="2">📖 القرآن الكريم</div>
+
+<div class="option" data-q="2">🗣 اللغة العربية</div>
+
+<div class="option" data-q="2">📚 العلوم الشرعية</div>
+
+<div class="option" data-q="2">🌱 أريد أن أبدأ من الأساس</div>
+
+</div>
+</div>
+
+
+<div class="question">
+
+<p>3. كم تستطيع أن تخصص للتعلم يوميًا؟</p>
+
+<div class="options">
+
+<div class="option" data-q="3">15 دقيقة</div>
+<div class="option" data-q="3">نصف ساعة</div>
+<div class="option" data-q="3">ساعة</div>
+<div class="option" data-q="3">أكثر من ساعة</div>
+
+</div>
+</div>
+
+
+<div class="question">
+
+<p>4. ما هدفك من التعلم؟</p>
+
+<div class="options">
+
+<div class="option" data-q="4">بناء أساس قوي</div>
+<div class="option" data-q="4">حفظ القرآن ومراجعته</div>
+<div class="option" data-q="4">فهم العلوم الشرعية</div>
+<div class="option" data-q="4">تحسين العربية وفهم التراث</div>
+
+</div>
+</div>
+
+
+<button class="main-btn" id="resultBtn">
+أظهر لي طريقي
+</button>
+
+
+<div class="result" id="result">
+
+<h4 id="resultTitle">طريقك يبدأ من هنا 🌿</h4>
+
+<p id="resultText"></p>
+
+<div class="plan" id="plan">
+
+<strong>اقتراح البداية:</strong>
+
+<ul id="planList"></ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<h2 class="section-title">أبواب العلم</h2>
+
+
+<section class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">📖</div>
+
+<h3>القرآن الكريم</h3>
+
+<p>
+تلاوة وحفظ ومراجعة وتدبر، مع بناء علاقة ثابتة بالقرآن.
+</p>
+
+<button class="card-btn" data-title="القرآن الكريم">
+ابدأ الطريق
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🗣</div>
+
+<h3>اللغة العربية</h3>
+
+<p>
+قراءة وكتابة ونحو وصرف وبلاغة بطريقة متدرجة.
+</p>
+
+<button class="card-btn" data-title="اللغة العربية">
+ابدأ الطريق
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🕌</div>
+
+<h3>العلوم الشرعية</h3>
+
+<p>
+مسارات منظمة ومتدرجة في العلوم الشرعية، مع الرجوع إلى المصادر الموثوقة.
+</p>
+
+<button class="card-btn" data-title="العلوم الشرعية">
+ابدأ الطريق
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🧠</div>
+
+<h3>مهارات طلب العلم</h3>
+
+<p>
+كيف تبدأ؟ كيف تراجع؟ كيف ترتب وقتك؟ وكيف تجعل العلم نافعًا في حياتك؟
+</p>
+
+<button class="card-btn" data-title="مهارات طلب العلم">
+ابدأ الطريق
+</button>
+
+</div>
+
+</section>
+
+
+<h2 class="section-title">🌱 في طريق العلم</h2>
+
+
+<section class="knowledge">
+
+
+<div class="knowledge-item">
+<h3>ابدأ من الأساس</h3>
+<p>لا تجعل كثرة الأبواب تمنعك من فتح أول باب.</p>
+</div>
+
+
+<div class="knowledge-item">
+<h3>تعلّم بتدرّج</h3>
+<p>القليل الثابت خير من الكثير المنقطع.</p>
+</div>
+
+
+<div class="knowledge-item">
+<h3>راجع ما تعلمت</h3>
+<p>المراجعة ليست تكرارًا زائدًا؛ بل تثبيت للعلم.</p>
+</div>
+
+
+<div class="knowledge-item">
+<h3>اعمل بما تعلمت</h3>
+<p>المقصود من العلم أن يهدي إلى الخير والعمل الصالح.</p>
+</div>
+
+
+<div class="knowledge-item">
+<h3>اسأل أهل العلم</h3>
+<p>
+في المسائل الشرعية لا نعتمد على المنصة وحدها، بل نرجع إلى أهل العلم الموثوقين.
+</p>
+</div>
+
+
+<div class="knowledge-item">
+<h3>احفظ وقتك</h3>
+<p>
+ادخل إلى ما تحتاج إليه، وخذ منه النافع، ثم امضِ في حياتك.
+</p>
+</div>
+
+</section>
+
+
+<section class="library">
+
+<h2 class="section-title">📚 مكتبة العلم النافع</h2>
+
+<p>
+سيكون هنا لاحقًا قسم يجمع المواد والكتب والدروس المختارة بطريقة منظمة وسهلة الوصول.
+</p>
+
+
+<div class="library-list">
+
+ض ع, [8/10/2026 8:28 AM]
+<div class="book">📖 القرآن وعلومه</div>
+<div class="book">🗣 العربية وعلومها</div>
+<div class="book">🕌 العلوم الشرعية</div>
+<div class="book">🧠 منهجية طلب العلم</div>
+<div class="book">🌱 التربية والآداب</div>
+<div class="book">📚 كتب مختارة</div>
+
+</div>
+
+</section>
+
+
+<section class="journey" id="journey">
+
+<h2 class="section-title">رحلتك في مُوَقَّت</h2>
+
+<p>
+خطوة صغيرة كل يوم، خير من طريق طويل بلا بداية.
+</p>
+
+<div class="bar">
+<div class="progress" id="progress"></div>
+</div>
+
+
+<div class="steps">
+
+<div class="step">✓ التعرف على مستواك</div>
+<div class="step">2. اختيار مسارك</div>
+<div class="step">3. بناء خطتك</div>
+<div class="step">4. التعلم والمتابعة</div>
+<div class="step">5. المراجعة والتقدم</div>
+
+</div>
+
+</section>
+
+
+<footer>
+مُوَقَّت — طريق هادئ إلى العلم النافع 🌹
+</footer>
+
+</div>
+</main>
+
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalText"></p>
+
+<button class="close-btn" id="closeModal">
+إغلاق
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+var answers = {};
+
+
+/* فتح الستارة */
+
+document.getElementById("startBtn").onclick = function(){
+
+var home = document.getElementById("home");
+
+home.classList.add("open");
+
+setTimeout(function(){
+
+home.style.display = "none";
+
+document.getElementById("site").style.display = "block";
+
+window.scrollTo(0,0);
+
+},1800);
+
+};
+
+
+/* اختيار الإجابات */
+
+document.querySelectorAll(".option").forEach(function(option){
+
+option.onclick = function(){
+
+var q = this.getAttribute("data-q");
+
+document.querySelectorAll('.option[data-q="' + q + '"]').forEach(function(x){
+
+x.classList.remove("selected");
+
+});
+
+this.classList.add("selected");
+
+answers[q] = this.textContent.trim();
+
+};
+
+});
+
+
+/* النتيجة */
+
+document.getElementById("resultBtn").onclick = function(){
+
+var result = document.getElementById("result");
+
+var title = document.getElementById("resultTitle");
+
+var text = document.getElementById("resultText");
+
+var plan = document.getElementById("plan");
+
+
+/* تم إصلاح الخطأ هنا */
+
+if(
+!answers["1"] ||
+!answers["2"] ||
+!answers["3"] ||
+!answers["4"]
+){
+
+result.style.display = "block";
+
+title.textContent = "أكمل البوابة أولًا 🌿";
+
+text.textContent =
+"اختر إجابة واحدة في كل سؤال حتى نستطيع بناء بداية مناسبة لك.";
+
+plan.style.display = "none";
+
+return;
+
+}
+
+
+var level = "مبتدئ";
+
+if(answers["1"].indexOf("متوسط") !== -1){
+level = "متوسط";
+}
+
+if(answers["1"].indexOf("متقدم") !== -1){
+level = "متقدم";
+}
+
+if(answers["1"].indexOf("متمكن") !== -1){
+level = "متمكن";
+}
+
+
+title.textContent = "أحسنت! بدأت ترسم طريقك 🌿";
+
+text.textContent =
+"مستواك: " + level +
+" — المجال: " + answers["2"] +
+" — الوقت: " + answers["3"] +
+" — الهدف: " + answers["4"];
+
+
+var list = document.getElementById("planList");
+
+list.innerHTML = "";
+
+
+var suggestions = [
+
+"ابدأ بدرس قصير يناسب مستواك الحالي.",
+
+"خصص وقتًا ثابتًا للتعلم كل يوم.",
+
+"راجع ما تعلمته قبل الانتقال إلى الجديد.",
+
+"اجعل القرآن حاضرًا في برنامجك بحسب قدرتك.",
+
+"زد مقدار التعلم تدريجيًا."
+
+];
+
+
+suggestions.forEach(function(item){
+
+var li = document.createElement("li");
+
+li.textContent = item;
+
+list.appendChild(li);
+
+});
+
+
+plan.style.display = "block";
+
+result.style.display = "block";
+
+document.getElementById("progress").style.width = "35%";
+
+result.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+};
+
+
+/* النوافذ */
+
+var modal = document.getElementById("modal");
+
+
+var messages = {
+
+"القرآن الكريم":
+"هنا سيكون مسار القرآن الكريم: التلاوة والحفظ والمراجعة والتدبر.",
+
+"اللغة العربية":
+"هنا سيكون مسار العربية: القراءة والكتابة والنحو والصرف والبلاغة.",
+
+"العلوم الشرعية":
+"هنا سيكون مسار العلوم الشرعية بصورة منظمة ومتدرجة، مع الرجوع إلى المصادر الموثوقة.",
+
+"مهارات طلب العلم":
+"هنا سيكون مسارًا يعين الطالب على تنظيم وقته، واختيار البداية المناسبة، والمراجعة، والاستمرار."
+
+};
+
+
+document.querySelectorAll(".card-btn[data-title]").forEach(function(button){
+
+button.onclick = function(){
+
+var title = this.getAttribute("data-title");
+
+document.getElementById("modalTitle").textContent = title;
+
+document.getElementById("modalText").textContent =
+messages[title];
+
+modal.classList.add("show");
+
+};
+
+});
+
+ض ع, [8/10/2026 8:28 AM]
+/* إغلاق النافذة */
+
+document.getElementById("closeModal").onclick = function(){
+
+modal.classList.remove("show");
+
+};
+
+
+modal.onclick = function(e){
+
+if(e.target === modal){
+
+modal.classList.remove("show");
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
