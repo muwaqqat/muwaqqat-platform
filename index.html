@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -39,8 +38,6 @@ button{font-family:inherit}
 .section-title{text-align:center;font-size:31px;margin-bottom:25px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:48px}
 .card{padding:28px 20px;text-align:center;border-radius:25px}.card-icon{font-size:46px}.card h3{color:#ffd0e8;margin:8px 0;font-size:22px}.card-btn{margin-top:18px}
-
-ض ع, [8/10/2026 4:42 PM]
 .knowledge{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-bottom:50px}
 .knowledge-item{padding:23px;border-radius:22px;background:rgba(255,255,255,.055);border:1px solid rgba(255,155,210,.18)}
 .knowledge-item h3{color:#ffd0e8;margin-bottom:8px}
@@ -89,8 +86,6 @@ footer{text-align:center;padding:35px;color:#ffc9e3}
 <div class="option" data-q="2">📖 القرآن الكريم</div><div class="option" data-q="2">🗣 اللغة العربية</div><div class="option" data-q="2">📚 العلوم الشرعية</div><div class="option" data-q="2">🌱 أريد أن أبدأ من الأساس</div>
 </div></div>
 <div class="question"><p>3. كم تستطيع أن تخصص للتعلم يوميًا؟</p><div class="options">
-
-ض ع, [8/10/2026 4:42 PM]
 <div class="option" data-q="3">15 دقيقة</div><div class="option" data-q="3">نصف ساعة</div><div class="option" data-q="3">ساعة</div><div class="option" data-q="3">أكثر من ساعة</div>
 </div></div>
 <div class="question"><p>4. ما هدفك من التعلم؟</p><div class="options">
@@ -131,7 +126,6 @@ footer{text-align:center;padding:35px;color:#ffc9e3}
 <div class="quran-card"><div class="card-icon">✍️</div><h3>خطّي في القرآن</h3><p>تتبع الكتابة والتقدم في تحسين الخط.</p><button class="card-btn" data-ward="خطّي في القرآن">ابدأ الورد</button></div>
 </div>
 
-ض ع, [8/10/2026 4:42 PM]
 <div class="reading">
 <h3 style="color:#ffd0e8;text-align:center">📜 شاشة القراءة النظرية</h3>
 <p class="ayah">﴿وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا﴾</p>
@@ -211,7 +205,6 @@ home.classList.add("open");
 setTimeout(function(){home.style.display="none";document.getElementById("site").style.display="block";window.scrollTo(0,0)},1800);
 };
 
-ض ع, [8/10/2026 4:42 PM]
 document.querySelectorAll(".option").forEach(function(option){
 option.onclick=function(){
 var q=this.getAttribute("data-q");
@@ -222,7 +215,7 @@ this.classList.add("selected"); answers[q]=this.textContent.trim();
 
 document.getElementById("resultBtn").onclick=function(){
 var result=document.getElementById("result"),title=document.getElementById("resultTitle"),text=document.getElementById("resultText"),plan=document.getElementById("plan");
-if(!answers["1"]  !answers["2"]  !answers["3"] || !answers["4"]){
+if(!answers["1"] || !answers["2"] || !answers["3"] || !answers["4"]){
 result.style.display="block";title.textContent="أكمل البوابة أولًا 🌿";text.textContent="اختر إجابة واحدة في كل سؤال.";plan.style.display="none";return;
 }
 var level="مبتدئ";
@@ -258,7 +251,7 @@ modal.onclick=function(e){if(e.target===modal)modal.classList.remove("show")};
 
 document.getElementById("savePlan").onclick=function(){
 var date=document.getElementById("lessonDate").value,amount=document.getElementById("amount").value.trim(),reflection=document.getElementById("reflection").value.trim();
-document.getElementById("planSaved").textContent=(dateamountreflection)?"تم حفظ خطة اليوم على هذا الجهاز مؤقتًا ✓":"اكتبي شيئًا واحدًا على الأقل أولًا.";
+document.getElementById("planSaved").textContent=(date || amount || reflection)?"تم حفظ خطة اليوم على هذا الجهاز مؤقتًا ✓":"اكتبي شيئًا واحدًا على الأقل أولًا.";
 };
 
 document.querySelectorAll(".quizBtn").forEach(function(btn){
@@ -274,8 +267,6 @@ document.getElementById("finalExam").onclick=function(){document.getElementById(
 
 document.getElementById("assistantBtn").onclick=function(){
 var q=document.getElementById("assistantInput").value.trim(),reply="أهلًا بكِ 🌿 سأساعدك في تنظيم الورد، وإذا كان السؤال خاصًا بالتسميع أو الحكم الشرعي فسيُحال إلى المعلمة أو أهل العلم الموثوقين.";
-
-ض ع, [8/10/2026 4:42 PM]
 if(q.indexOf("موعد")!==-1)reply="يمكنك تسجيل موعد الحلقة في خانة خطة اليوم.";
 if(q.indexOf("حفظ")!==-1)reply="اجعلي الحفظ قليلًا ثابتًا، ثم راجعي القريب والبعيد.";
 if(q.indexOf("تأخير")!==-1)reply="إذا تأخرتِ فأدخلي سبب التأخير، ويُترك نظام الجزاءات الفعلي للسياسة المعتمدة وإدارة المنصة.";
